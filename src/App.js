@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import TableWithFilter from './components/TableWithFilter/TableWithFilter'
+import store from './store/store';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+function App(props) {
+    props={...store}
+    return (
+        <div className="App">
+            <TableWithFilter 
+                filterFields={props.filterFields}
+                columns={props.columns}
+                records={props.records}
+                pageSize={props.pageSize}
+            />
+        </div>
+    );
 }
 
 export default App;

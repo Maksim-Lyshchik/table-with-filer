@@ -1,0 +1,19 @@
+.pagination {
+    padding:0;
+    list-style: none;
+    counter-reset: li;
+}  
+.pageNumber {
+    display:inline-block;
+    border: 2px solid #ffd300;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+}
+.selectedPage{
+    background-color: #ffd300;
+}
+.number{
+    text-decoration: none;
+}
